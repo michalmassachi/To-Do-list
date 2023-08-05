@@ -1,0 +1,54 @@
+<!--Names: Tal Teri 319123543
+           Michal Massachi 211990841-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Task List</title>
+   <link rel="stylesheet" href="main.css" /> <!-- Linking an external CSS file -->
+</head>
+<body>
+   <header>
+      <h1>Task List</h1> <!-- Page title -->
+      <form id="new-task-form"> <!-- Form for adding new tasks -->
+         <input 
+            type="text" 
+            name="new-task-input" 
+            id="new-task-input" 
+            placeholder="What do you have planned?" /> <!-- Input field for task description -->
+         <input 
+            type="date"
+            name="new-task-due-date"
+            id="new-task-due-date"
+            placeholder="Due Date"
+         /> <!-- Input field for selecting due date -->
+         <select id="new-task-category"> <!-- Dropdown for selecting task category -->
+            <option value="Work">Work</option> <!-- Predefined category options -->
+            <option value="House">House</option>
+            <option value="Family">Family</option>
+            <option value="School">School</option>
+            <option value="Sport">Sport</option>
+            <option value="Other">Other</option>
+         </select>      
+         <input 
+            type="text"
+            name="new-task-custom-category"
+            id="new-task-custom-category"
+            placeholder="Enter custom category"
+            style="display: none;" /><!-- Initially hidden input field for custom category -->
+         
+         <input 
+            type="submit"
+            id="new-task-submit" 
+            value="Add task" /> <!-- Submit button for adding a new task -->
+      </form>
+   </header>
+   <main>
+      <section class="task-list"> <!-- Section for displaying the list of tasks -->
+         <h2>Tasks</h2> <!-- Heading for task list -->
+         <div id="tasks"></div> <!-- Container for dynamically generated tasks -->
+      </section>
+   </main>
+   <script src="main.js"></script> <!-- Linking an external JavaScript file -->
+</body>
+</html>
